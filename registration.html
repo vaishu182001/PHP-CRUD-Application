@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+<script>  
+function validateform()
+{  
+var id1=document.f2.id.value;
+var name1=document.f2.name.value;  
+var password1=document.f2.password1.value;  
+var pno1=document.f2.pno.value;  
+var e=document.f2.eid.value;
+if (name1==null || name1==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password1.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+  else if (pno1==null || pno1=="")
+  {
+  	alert("Phone Number can't be blank");
+  	return false;
+  }
+   else if(e==null || e=="")
+  {
+  	alert("Email ID can't be blank");
+  	return false;
+ }  
+  else if(id1==null || id1=="")
+  {
+  	alert("ID can't be blank,you need to give some identity");
+  	return false;
+  }  
+
+ alert('Successfully Registered');
+
+}
+</script>  
+<style>
+	table,td
+{
+    border: 1px solid black;
+    margin-left: auto;
+  margin-right: auto;
+}
+body{
+	background: yellow;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align: center">Welcome to new customer registration </h1>
+<br>
+<br>
+
+<p><center>Fill in the below details with valid information <center></p>
+<form name="f2" onsubmit="validateform()" action="regis1.php" method="POST">
+<table name="t1">
+ 
+  <tr>
+    <td>ID :</td>
+    <td> <input type="text" id="id" name="id" ><br></td>
+   
+  </tr>
+  <tr>
+    <td>Name :</td>
+    <td> <input type="text" id="name" name="name" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Phone Number:</td>
+    <td> <input type="text" id="pno" name="pno" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Email ID:</td>
+    <td> <input type="text" id="eid" name="eid" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Address:</td>
+    <td> <input type="text" id="address" name="address" ><br></td>
+   
+  </tr>
+  <tr>
+    <td>Password :</td>
+    <td><input type="password" id ="password1" name="password1"></td>
+    
+  </tr>
+</table>
+  <center><input type="submit" name="submit" value="SUBMIT"></center>
+</form>
+<br>
+<br>
+<center><a href="http://localhost/PHPApp/login.html ">Click here to go back to the login page</a></center>
+</body>
+</html>

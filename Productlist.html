@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product List</title>
+<style>
+	body{
+		background: yellow;
+	}
+
+</style>
+</head>
+<body>
+
+<h1 style="text-align: center;color: blue">Here You can view the list of products available</h1>
+<br>
+<br>
+<br>
+<p><center>You can find it here in the drop down list</center></p>
+<br>
+<form name='plist' action="categories.php" method="POST">
+<center>
+Product List:<select id="pl" name="pl">
+  <option value="Cosmetics">Cosmetics</option>
+  <option value="soaps">Soaps</option>
+  <option value="Toothpaste">Toothpaste</option>
+  <option value="Snacks">Snacks</option>
+</select>
+</center>
+<br>
+<br>
+<center><input type="submit" name="submit" value="SHOW"></center>
+</form>
+</body>
+</html>

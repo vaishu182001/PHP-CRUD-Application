@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Updation</title>
+<script>  
+function validateform()
+{  
+var id1=document.f3.id.value;  
+var password1=document.f3.password2.value;  
+var pno=document.f3.pno1.value;  
+var e=document.f3.eid1.value;
+var address=document.f3.add1.value;
+if (id1==null || id1==""){  
+  alert("ID can't be blank");  
+  return false;  
+}else if(password1.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+  else if (pno==null || pno=="")
+  {
+  	alert("Phone Number can't be blank");
+  	return false;
+  }
+   else if(e==null || e=="")
+  {
+  	alert("Email ID can't be blank");
+  	return false;
+ }  
+  else if(address==null || address=="")
+  {
+  	alert("Address is mandatory !");
+  	return false;
+  }  
+
+ alert('Successfully Updated');
+
+}
+</script>
+<style>
+	body{
+		background: yellow;
+	}
+	</style>
+</head>
+<body>
+
+<h1 style="text-align: center">Update User Information </h1>
+<br>
+<br>
+
+<p><center>Give in the valid user information and press change<center></p>
+<form name="f3" onsubmit="validateform()" action="userupdation.php" method="POST">
+<table>
+ 
+  <tr>
+    <td>ID :</td>
+    <td> <input type="text" id="id" name="id" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Phone Number :</td>
+    <td> <input type="text" id="pno1" name="pno1" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Mail Id :</td>
+    <td> <input type="text" id="eid1" name="eid1" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Address:</td>
+    <td> <input type="text" id="add1" name="add1" ><br></td>
+   
+  </tr>
+  <tr>
+    <td>Password :</td>
+    <td><input type="password" id ="password2" name="password2"></td>
+    
+  </tr>
+</table>
+  <center><input type="submit" name="change" value="CHANGE"></center>
+</form>
+</body>
+</html>
