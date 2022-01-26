@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Products</title>
+<script>  
+function validateform(){  
+var id1=document.f3.id.value;  
+var price1=document.f3.prc.value;  
+var cat=document.f3.cat.value;
+var stock=document.f3.stc.value;  
+if (id1==null || id1==""){  
+  alert("Product ID can't be blank");  
+  return false;  
+ }
+ else if(stock==null || stock==""){  
+  alert("Enter valid stock value");  
+  return false;  
+  }  
+  else if(cat ==null || cat==""){  
+  alert("Enter valid Category Name");  
+  return false;  
+  }  
+
+  else if (price1==null || price1=="")
+  {
+  	alert("Price can't be blank");
+  	return false;
+  }
+
+  alert('Successfully Added');
+}  
+</script>  
+<style>
+	table,td
+{
+    border: 1px solid black;
+    margin-left: auto;
+  margin-right: auto;
+}
+body{
+  background: yellow;
+}
+</style>
+
+</head>
+<body>
+
+<h1 style="text-align: center">Welcome to Add New Product </h1>
+<br>
+<br>
+
+<p><center>Add products below <center></p>
+<form name="f3" onsubmit="validateform()" action="addprod.php" method="POST">
+<table name="t1">
+ 
+  <tr>
+    <td>ID :</td>
+    <td> <input type="text" id="id" name="id" ><br></td>
+   
+  </tr>
+  <tr>
+    <td>Description :</td>
+    <td> <input type="text" id="descp" name="descp" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Category:</td>
+    <td> <input type="text" id="cat" name="cat" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Stock :</td>
+    <td> <input type="text" id="stc" name="stc" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Price :</td>
+    <td> <input type="text" id="prc" name="prc" ><br></td>
+   
+  </tr>
+ 
+</table>
+  <center><input type="submit" name="submit" value="SUBMIT"></center>
+</form>
+</body>
+</html>

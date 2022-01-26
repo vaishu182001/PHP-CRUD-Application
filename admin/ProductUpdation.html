@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Update Products</title>
+<script>  
+function validateform(){  
+var d=document.f3.descp.value;  
+var price1=document.f3.prc.value;  
+var cat=document.f3.cat.value;
+var stock=document.f3.stc.value;  
+if (d==null || d==""){  
+  alert("Product Description can't be blank");  
+  return false;  
+ }
+ else if(stock==null || stock==""){  
+  alert("Enter valid stock value");  
+  return false;  
+  }  
+  else if(cat ==null || cat==""){  
+  alert("Enter valid Category Name");  
+  return false;  
+  }  
+
+  else if (price1==null || price1=="")
+  {
+  	alert("Price can't be blank");
+  	return false;
+  }
+
+  alert('Successfully Updated');
+}  
+</script>  
+<style>
+	table,td
+{
+    border: 1px solid black;
+    margin-left: auto;
+  margin-right: auto;
+}
+body{
+  background: yellow;
+}
+</style>
+
+</head>
+<body>
+
+<h1 style="text-align: center">Welcome to Update Product Information</h1>
+<br>
+<br>
+
+<p><center>Fill in the new details elow <center></p>
+<form name="f3" onsubmit="validateform()" action="updateprod.php" method="POST">
+<table name="t1">
+ 
+  <tr>
+    <td>ID :</td>
+    <td> <input type="text" id="id" name="id" ><br></td>
+   
+  </tr>
+  <tr>
+    <td>Description :</td>
+    <td> <input type="text" id="descp" name="descp" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Category:</td>
+    <td> <input type="text" id="cat" name="cat" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Stock :</td>
+    <td> <input type="text" id="stc" name="stc" ><br></td>
+   
+  </tr>
+   <tr>
+    <td>Price :</td>
+    <td> <input type="text" id="prc" name="prc" ><br></td>
+   
+  </tr>
+ 
+</table>
+  <center><input type="submit" name="submit" value="SUBMIT"></center>
+</form>
+</body>
+</html>
